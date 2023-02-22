@@ -1,0 +1,145 @@
+.headingsContainer{
+  padding-top: 6rem;
+  
+  /* margi */
+}
+
+.wall{
+  /* background: url("../image/backGround.png"); */
+  padding: 2rem;
+  background-color: #f7f7dbd3;
+
+}
+.name{
+  display: flex;
+} 
+
+.right{
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc{
+  padding:3px;
+  margin: 0 3px;
+  border: 1px solid black;
+  color:black;
+  background-color: whitesmoke;
+  border-radius: none;
+}
+
+.conc form .mainContainer label{
+    color: rgb(66, 3, 3);
+    font-size: 1rem;
+}
+
+.conc form .mainContainer input{
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* color: #7f7f7f */
+} 
+button {
+  background-color: #43d4f5;
+  color: rgb(252, 252, 252);
+  padding: 14px 20px;
+  border-radius: 25px;
+  border:none;
+  margin: 7px 0;
+  /* width: 50%; */
+  font-size: 15px;
+  font-weight: 100px;
+
+  
+}
+button:hover {
+  opacity: 0.7;
+}
+
+textarea {
+  
+  margin: 10px 0;
+  padding: 5px 18px;
+  resize:vertical;
+  /* color: #7f7f7f; */
+  border: 1px solid black;
+  border-radius: 5px;
+}
+ 
+.conc form{
+    width:50rem;
+    height: auto;
+    margin: auto;
+    /* margin-top: 1rem;;
+    margin-bottom: 2rem; */
+    padding: 2rem;
+    color:rgb(9, 9, 9);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(245, 245, 244);
+    border: 2px solid rgb(71, 4, 4);
+}
+.headingsContainer{
+    text-align: center;
+    
+}
+.mainContainer{
+    padding: 16px;
+}
+.flavors{
+    font-size: .8rem;
+    margin-left: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: auto;
+}
+
+.btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}   
+
+   
+
+   
+
+      
+@media screen and (max-width: 850px) {
+  form{
+    width: 30rem;
+  }
+  textarea{
+    width: 90%;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .name{
+      flex-direction: column;
+  }
+  form{
+    width: 25rem;
+  }
+
+
+}
+
+@media screen and (max-width: 400px) {
+  form{
+    width: 12rem;
+  }
+  .flavors{
+    font-size: .7rem;
+    width: max-content;
+  }
+  textarea{
+    width: 70%;
+  }
+}
+
+        

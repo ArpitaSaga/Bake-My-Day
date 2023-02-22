@@ -1,0 +1,33 @@
+
+    <form action="/signup" method="POST">
+
+        <div class="headingsContainer">
+            <h3>Sign up</h3>
+
+        </div>
+
+
+        <div class="mainContainer">
+
+            <label for="phonenumber">Phone number</label>
+            <input type="text" placeholder="Enter the phone number" minlength="10" maxlength="10" name="number" required>
+
+            <br><br>
+
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter the user_name" name="username" required>
+
+            <br><br>
+
+
+            <label for="password">Create password</label>
+            <input type="pasosword" placeholder="Enter the Password" name="password" required>
+            <br><br>
+            <label for="password">Confirm password</label>
+            <input type="pasosword" placeholder="Enter the Password" name="confirm_password" required>
+            <div class="btn">
+                <button type="submit">SIGN UP</button>
+            </div>
+        </div>
+        <p class="register">Already have an account?  <a href="signIn"> Sign in here!</a></p>
+</form>
