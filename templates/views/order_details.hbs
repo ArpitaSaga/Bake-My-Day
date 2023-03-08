@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\custume.css">
+    <title>Bake my day</title>
+</head>
+<h2 style="margin-left:30 rem;text-align:center;color:rgb(249, 244, 251)">ORDER DETAILS</h2>
+<style>
+    .conc{
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .conc form {
+        border: none;
+        margin: 2rem auto;
+        
+    }
+</style>
+
+<body>
+    {{>navbar}}
+    {{>sidenav}}
+    <section class="conc">
+        <h2 style="text-align: center; color: brown; text-shadow: var(--box-shadow)">Confirm your order details</h2>
+    <form class="form">
+
+        <div class="form-group">
+            <label for="email">Name:</label>
+            <br>
+            <input class="form-control" id="name" type="text" pattern="[a-zA-Z\s]+" required="" autocomplete=""
+                placeholder="Type your name here...">
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <br>
+            <input class="form-control" type="email" required="" placeholder="Type your email address..."
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="phone">Phone no:</label>
+            <br>
+            <input class="form-control" type="tel" minlength="10" maxlength="10" required="" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="date">Delivery Date Or Pick Up Date</label>
+            <br>
+            <input type="date" id="date" min="10:00" max="21:00" name="date" required>
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="total-amount">Delivery time:</label>
+            <br>
+            <input class="form-control" type="time">
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Delivery Address:</label>
+            <br>
+            <input class="form-control" type="text" required="" placeholder="Type your Address...">
+
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="payment-option">Cake size:</label>
+            <select name="payment" class="pay">
+                <option value="cash-on">Small</option>
+                <option value="net-banking">Medium</option>
+                <option value="net-banking">Large</option>
+
+            </select>
+
+        </div>
+        <br><br>
+        <div class="form-group">
+            <label for="payment-option">Payment Option:</label>
+            <select name="payment" class="pay">
+                <option value="cash-on" selected>Cash on delivery</option>
+                <option value="net-banking">Online</option>
+
+            </select>
+
+        </div>
+        <br>
+
+        </div>
+        </div>
+
+        </div>
+
+        <div class="right">
+            <p>Total amount: {{something}}</p>
+            <button class="button" type="submit">Place the order</button>
+        </div>
+    </form>
+    {{>footer}}
+    </section>
+    <script src="js/date2.js"></script>
+</body>
+
+</html>

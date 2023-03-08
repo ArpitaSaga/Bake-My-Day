@@ -1,0 +1,43 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+</html>
+<body>
+    <i class="fa fa-bars" id="menu-bar" style="font-size: 24px;"></i>
+    <div class="sidenav">
+        <a href="/"><i class="fa fa-home" style="font-size:20px"></i> Home</a>
+        <a href="menu"><i class="fa fa-birthday-cake" style="font-size:18px"></i> Menu</a>
+        <a href="customize_cake"><i class="fa fa-star" style="font-size:18px"></i> Customized Order</a>
+        <a href="cart"><i class="fa fa-cart-plus" style="font-size:20px"></i> Cart</a>
+        <a href="wishlist"><i class="fa fa-heart" style="font-size:18px"></i> Wishlist</a>
+        <a href="purchase_history"><i class="fa fa-shopping-basket" style="font-size:18px"></i>Purchase History</a>
+        <a href="profile"><i class="fa fa-user-circle-o" style="font-size:18px"></i> Profile</a>
+        <a href="contact"><i class="fa fa-phone" style="font-size:18px"></i> Contact Us</a>
+        <a href="faq" style="margin-bottom: 0;"><i class="fa fa-sticky-note" style="font-size:18px;"></i> FAQ</a>
+        <hr style="margin:0;">
+        {{!-- <script> --}}
+        {{!-- <% if (req.cookies.jwt) {%> --}}
+          <a href="signout" style="margin-top: 0;"><i class="fa fa-power-off" style="font-size:18px"></i> Sign out</a>
+        {{!-- <%} else {%> --}}
+          {{!-- <a href="signup" ><i class="fa fa-id-card-o" style="font-size:18px"></i> Sign Up</a>
+          <a href="signin" style="margin-top: 0;"><i class="fa fa-sign-in" style="font-size:18px"></i> Sign In</a> --}}
+        {{!-- <% } %> --}}
+        {{!-- </script> --}}
+    </div>
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+</body>
+

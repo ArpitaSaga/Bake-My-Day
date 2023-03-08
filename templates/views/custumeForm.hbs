@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\custume.css">
+    <title>Bake my day</title>
+
+</head>
+
+<body>
+    {{>navbar}}
+    {{>sidenav}}
+    <section class="conc">
+        <div class="wall">
+        <div class="headingsContainer">
+            <h3 style="color: brown">Customized Cake Order Form</h3>
+            <p style="color: brown">After you submit this form , our sales staff will contact you to confirm all your cake requirements.</p>
+        </div>
+
+        <form action="/customize_cake" method="POST">
+            <div class="mainContainer">
+
+                <label for="Name">Name</label>
+                <div class="name">
+                    <input style="margin-right: 15px;" type="text" placeholder="First name" name="first" required>
+                    <input type="text" placeholder="Last name" name="last" required>
+                </div>
+
+                <br>
+                <label for="Email">Email</label>
+                <input type="email" placeholder="abc@gmail.com" name="email" required>
+                <br><br>
+                <label for="phonenumber">Mobile No.</label>
+                <input type="text" minlength="10" maxlength="10" placeholder="9123456780" name="number" required>
+                <br><br>
+                <label for="date">Delivery Date Or Pick Up Date</label>
+                <input type="date" id="date" min="" name="date" required>
+                <br><br>
+
+                <label for="time">Delivery Or Pick Up Time</label>
+                <input type="time" id="time" name="time" placeholder="HH:MM" min="10:00" max="21:00" required>
+                <br><br>
+
+                <label for="address">Complete Delivery Address</label>
+                <br>
+                <textarea maxlength="" name="address" id="add" cols="81" rows="1" placeholder="Enter address"
+                    required></textarea>
+
+                <br><br>
+                <label for="size">Cake Size</label>
+                <input type="number" placeholder="Number of guests" name="size" required>
+                <br><br>
+
+
+                <label for="flavor">Cake Flavor</label>
+                <select name="flavors" class="flavors" required>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate" selected>Chocolate</option>
+                    <option value="strwberry">Strawberry</option>
+                    <option value="Marble Cake">Marble Cake</option>
+                    <option value="Nutella Cakey">Nutella Cakey</option>
+                    <option value="Butterscotch">Butterscotch</option>
+                    <option value="Red Velvet">Red Velvet</option>
+                    <option value="Mocha Cake">Mocha Cake</option>
+                    <option value="Peanut Butter Cake">Peanut Butter Cake</option>
+                    <option value="other" title="mention it in other details box">Other</option>
+                </select>
+                <br><br>
+                <label for="filling">Cake Filling</label>
+                <select name="filling" class="flavors" required>
+                    <option value="Chocolate Ganache" selected>Chocolate Ganache</option>
+                    <option value="Nutella Filling">Nutella Filling</option>
+                    <option value="Lemon Filling">Lemon Filling</option>
+                    <option value="Peanut Butter Filling">Peanut Butter Filling</option>
+                    <option value="Berries and Cream">Berries and Cream</option>
+                    <option value="Nut Based Cream">Nut Based Cream</option>
+                    <option value="Cream Cheese Based">Cream Cheese Based</option>
+                    <option value="other" title="mention it in other details box">Other</option>
+                </select>
+                <br><br>
+                <label for="details">Other Details</label>
+                <br>
+                <textarea name="details" id="details" cols="81" rows="1" placeholder="Any other details"></textarea>
+
+                <br><br>
+                <label for="calculate price">Total price:</label>
+                <button class="calc" type="submit">Calculate the price</button>
+                <p style="display: none">{{price}}</p>
+
+            </div>
+            <div class="btn">
+
+                <a href="confirmation"><button type="submit">Place the order</button></a>
+            </div>
+
+        </form>
+        </div>
+        {{>footer}}
+
+    </section>
+    <script src="js/date.js"></script>
+
+
+</body>
+
+</html>

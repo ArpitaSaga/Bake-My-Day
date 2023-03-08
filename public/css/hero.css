@@ -1,0 +1,54 @@
+:root{
+    --black: #1B1722;
+    --white : #F0F0F0;
+    --blue:#05a6b4;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home{
+    width:100%;
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    background-color: #f7f7dbd3;
+    /* background: url("../image/backGround.png"); */
+    /* background-size: cover;
+    background-position: center center; */
+}
+.home .homeAnimation {
+    width: 500px; height: 500px;
+}
+.home .homeContent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 4rem;
+}
+.home .homeContent h2{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 5rem;
+    color: brown;
+    text-shadow: var(--box-shadow);
+}
+.home .homeContent p{
+    font-size: 1.5rem;
+    /* line-height: 2; */
+    margin-bottom: 2rem;
+}
+.home .homeContent .home-btn{
+    height: 3rem;
+}
+.home .homeContent .home-btn button{
+    font-size: 1.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
+.home .homeContent .home-btn button:hover{
+    font-size: 1.6rem;
+}
