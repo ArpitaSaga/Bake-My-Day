@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{!-- <style>
+        .productContent .btn:hover{
+    color: black;
+}
+    </style> --}}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake my day</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/searchbar.css">
+    <style>
+        .list{
+            min-height: 90vh;
+            max-height; fit-content;
+        }
+    </style>
+</head>
+<body>
+    {{>navbar}}
+    {{>sidenav}}
+    <section class="conc">
+    <h2 style="color: brown; text-align: center; font-size: 3rem; margin-top: 6rem; text-shadow: var(--box-shadow);">My wishlist</h2>
+    <div class="list">
+        <div class="card">
+            <a href="#">
+                <img src="image/Angel food cake.png" alt="" srcset="" width="200">
+            </a>
+            <div class=" productContent">
+              <button class="btn"><i class="fa fa-heart" style="font-size:24px; cursor:pointer; color:red"></i></button>
+                <h5>Angel food cake</h5>
+                <h6>Price: 400rs</p>
+            </div>
+            <div class="btn">
+                <button>Add to cart</button>
+                <a href="order_details"><button>Order now</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="image/Apricot cake.png" alt="" srcset="" width="200">
+            </a>
+            <div class=" productContent">
+              <button class="btn"><i class="fa fa-heart" style="font-size:24px; cursor:pointer; color:red"></i></button>
+                <h5>Apricot cake</h5>
+                <h6>Price: 400rs</p>
+            </div>
+            <div class="btn">
+                <button>Add to cart</button>
+                <a href="order_details"><button>Order now</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="image/Pear cake.png" alt="" srcset="" width="200">
+            </a>
+            <div class=" productContent">
+              <button class="btn"><i class="fa fa-heart" style="font-size:24px; cursor:pointer;color:red"></i></button>
+                <h5>Pear cake</h5>
+                <h6>Price: 400rs</p>
+            </div>
+            <div class="btn">
+                <button>Add to cart</button>
+                <a href="order_details"><button>Order now</button></a>
+            </div>
+        </div>
+        </div>
+        {{>footer}}
+        </section>
+</body>
+</html>
